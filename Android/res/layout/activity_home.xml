@@ -1,0 +1,325 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+	
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent" 
+         android:orientation="vertical"
+         android:background="#d0d0d0">
+         <View
+  android:layout_width="match_parent"
+  android:layout_height="10dp"
+  >
+</View>
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" >
+         
+
+            <ImageView
+                android:id="@+id/bulbimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:src="@drawable/bulb" />
+
+     
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" 
+                 android:layout_weight="1">
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                   
+       
+                    <TextView
+                        android:id="@+id/bulbtext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/bulbtext"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    
+
+                    <Button
+                        android:id="@+id/bulb_power"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Power" />
+
+                </TableRow>
+<View
+  android:layout_width="match_parent"
+  android:layout_height="20dp"
+  >
+</View>
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+<Switch
+    android:id="@+id/bulbswitch"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1" />
+<View
+  android:layout_width="match_parent"
+  android:layout_height="10dp"
+  android:layout_weight=".5"
+  >
+</View>
+<TextView
+                        android:id="@+id/bulbseektext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       android:layout_weight=".5"  
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                </TableRow>
+<View
+  android:layout_width="match_parent"
+  android:layout_height="20dp"
+  >
+</View>
+                <SeekBar
+                    android:id="@+id/bulbseekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </TableLayout>
+
+     
+         
+    </LinearLayout>
+    <View
+  android:layout_width="match_parent"
+  android:layout_height="10dp"
+  >
+</View>
+       <View
+    android:layout_width="match_parent"
+    android:layout_height="5dp"
+    android:background="#888888" >
+
+</View>
+    
+     <View
+  android:layout_width="match_parent"
+  android:layout_height="10dp"
+  >
+</View>
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" >
+         
+
+            <ImageView
+                android:id="@+id/fanimage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:src="@drawable/fan" />
+
+     
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" 
+                 android:layout_weight="1">
+                <TableRow
+                    android:id="@+id/tableRow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                   
+       
+                    <TextView
+                        android:id="@+id/fantext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fantext"
+                        android:layout_weight="2"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                    
+
+                    <Button
+                        android:id="@+id/fan_power"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Power" />
+
+                </TableRow>
+<View
+  android:layout_width="match_parent"
+  android:layout_height="20dp"
+  >
+</View>
+                <TableRow
+                    android:id="@+id/tableRow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+<Switch
+    android:id="@+id/fanswitch"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1" />
+<View
+  android:layout_width="match_parent"
+  android:layout_height="10dp"
+  android:layout_weight=".5"
+  >
+</View>
+<TextView
+                        android:id="@+id/fanseektext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       android:layout_weight=".5"  
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                </TableRow>
+<View
+  android:layout_width="match_parent"
+  android:layout_height="20dp"
+  >
+</View>
+                <SeekBar
+                    android:id="@+id/fanseekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </TableLayout>
+
+     
+         
+    </LinearLayout>
+    <View
+  android:layout_width="match_parent"
+  android:layout_height="10dp"
+  >
+</View>
+       <View
+    android:layout_width="match_parent"
+    android:layout_height="5dp"
+    android:background="#888888" >
+
+</View>
+
+        <View
+  android:layout_width="match_parent"
+  android:layout_height="10dp"
+  >
+</View>
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/tvimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:src="@drawable/tv" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" 
+                 android:layout_weight="1">
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                   
+       
+                    <TextView
+                        android:id="@+id/tvtext"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvtext"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                </TableRow>
+<View
+  android:layout_width="match_parent"
+  android:layout_height="20dp"
+  >
+</View>
+                <TableRow
+                    android:id="@+id/tableRow6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+<Switch
+    android:id="@+id/tvswitch"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1" />
+
+<View
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_weight="1">
+</View>
+                </TableRow>
+            </TableLayout>
+
+     
+         
+    </LinearLayout>
+    <View
+  android:layout_width="match_parent"
+  android:layout_height="20dp"
+  >
+</View>
+       <View
+    android:layout_width="match_parent"
+    android:layout_height="5dp"
+    android:background="#888888" >
+
+</View>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" >
+
+           <EditText
+               android:id="@+id/ipaddress"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:ems="10" >
+
+               <requestFocus />
+           </EditText>
+
+           <Button
+               android:id="@+id/connect"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="Connect" />
+
+       </LinearLayout>
+
+       <TextView
+           android:id="@+id/textlog"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:text="" />
+     
+    </LinearLayout>
+    
+    </ScrollView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HomeAutomation</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_bulb">Bulb</string>
+    <string name="title_activity_fan">Fan</string>
+    <string name="hello_world">Hello world!</string>
+     <string name="bulbtext">BULB</string>
+     <string name="tvtext">TV</string>
+     <string name="fantext">FAN</string>
+     <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+     <string name="scanning">Scanning for devices...</string>
+    <string name="select_device">Select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+     <string name="power">Power Consumption</string>
+      
+      <string name="action_settings">Settings</string> 
+ <string name="action_bluetooth">Bluetooth</string>
+</resources>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d0d0d0" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/fan" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/fantext"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+        </LinearLayout>
+        
+            <View
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                
+
+    ></View>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+ <View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" 
+                        android:layout_weight="2"/>
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                         android:layout_weight="4"
+                        android:textColor="#666666"
+                        android:text="@string/power"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" 
+                        android:layout_weight="1"/>
+
+                   
+
+                </TableRow>
+<View
+                        android:id="@+id/view3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" 
+                        />
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+ <View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" 
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/fan_kwh"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Kwh"
+                        android:textColor="#333333"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+<View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" 
+                        android:layout_weight="1"/>
+                </TableRow>
+<View
+                        android:id="@+id/view3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" 
+                        />
+                <TableRow
+                    android:id="@+id/tableRow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+<View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" 
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/fan_w"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="W"
+                        android:layout_weight="2"
+                        android:textColor="#333333"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+<View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" 
+                        android:layout_weight="1"/>
+                </TableRow>
+<View
+                        android:id="@+id/view3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" 
+                        />
+                <TableRow
+                    android:id="@+id/tableRow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+<View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" 
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/fan_v"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="V"
+                        android:layout_weight="2"
+                        android:textColor="#333333"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                   <View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" 
+                        android:layout_weight="1"/>
+
+                </TableRow>
+                <View
+                        android:id="@+id/view3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" 
+                        />
+                 <TableRow
+                        android:id="@+id/tableRow5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+<View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" 
+                        android:layout_weight="1"/>
+
+                     <TextView
+                         android:id="@+id/fan_a"
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:text="A"
+                         android:textColor="#333333"
+                         android:layout_weight="2"
+                         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+<View
+                        android:id="@+id/view3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" 
+                        android:layout_weight="1"/>
+                    </TableRow>
+            </TableLayout>
+
+</LinearLayout>
+
+</ScrollView>
