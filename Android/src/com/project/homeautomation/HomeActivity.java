@@ -32,12 +32,12 @@ import android.widget.TextView;
 
 public class HomeActivity extends Activity implements OnCheckedChangeListener ,OnSeekBarChangeListener, OnClickListener{
 	
-	Switch fanbutton ,bulbbutton,tvbutton;
+	Switch fanbutton ,bulbbutton;
 	
 	String ipaddress, BulbPower;
 	TextView fanseekText, bulbseekText,textlog;
 	SeekBar fanseekBar, bulbseekBar;
-	Button bulb_power,fan_power, connect;
+	Button bulb_power,fan_power, connect, clear;
 	Boolean connected=false;//stores the connectionstatus
 	 EditText address;
     NetworkTask networktask;
@@ -49,7 +49,7 @@ public class HomeActivity extends Activity implements OnCheckedChangeListener ,O
 		setContentView(R.layout.activity_home);
 		bulbbutton = (Switch) findViewById(R.id.bulbswitch);
 		 fanbutton = (Switch)findViewById(R.id.fanswitch);
-		 tvbutton= (Switch)findViewById(R.id.tvswitch);
+		 clear = (Button)findViewById(R.id.clear);
 		fanseekText=(TextView)findViewById(R.id.fanseektext);
 		bulbseekText=(TextView)findViewById(R.id.bulbseektext);
 		bulbseekBar= (SeekBar)findViewById (R.id.bulbseekBar);
@@ -64,9 +64,10 @@ public class HomeActivity extends Activity implements OnCheckedChangeListener ,O
 		bulb_power.setOnClickListener(this);
 		fan_power.setOnClickListener(this);
 		connect.setOnClickListener(this);
+		clear.setOnClickListener(this);
 	     bulbbutton.setOnCheckedChangeListener(this);
 		fanbutton.setOnCheckedChangeListener(this);
-		tvbutton.setOnCheckedChangeListener(this);
+		
 		 networktask = new NetworkTask();
 	}
 	
@@ -87,10 +88,7 @@ public class HomeActivity extends Activity implements OnCheckedChangeListener ,O
 		else
 			networktask.SendDataToNetwork("fanLOW"+"\n");
 		} break;
-		case R.id.tvswitch:
-		{ if(isChecked)
-		textlog.setText("");
-		} break;
+		
 			
 		}
 		}
@@ -183,6 +181,9 @@ public class HomeActivity extends Activity implements OnCheckedChangeListener ,O
 			break;
 		case R.id.connect:
 			connect();
+			break;
+		case R.id.clear:
+			textlog.setText("");
 			break;
 		}
 		}
