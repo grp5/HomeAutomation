@@ -17,7 +17,7 @@ bulb_v =(TextView)findViewById(R.id.bulb_v);
 bulb_a =(TextView)findViewById(R.id.bulb_a);
 
 Intent bulbIntent = getIntent();
-bulb_w.setText(bulbIntent.getStringExtra("power")+"   W");
+bulb_w.setText("           "+bulbIntent.getStringExtra("power"));
 
 	}
 

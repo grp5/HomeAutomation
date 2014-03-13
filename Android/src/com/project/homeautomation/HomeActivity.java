@@ -11,14 +11,11 @@ import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketAddress;
-import java.util.concurrent.ArrayBlockingQueue;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -29,12 +26,13 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class HomeActivity extends Activity implements OnCheckedChangeListener ,OnSeekBarChangeListener, OnClickListener{
 	
-	Switch fanbutton ,bulbbutton;
+	ToggleButton FanToggleButton ,BulbToggleButton;
 	
-	String ipaddress, BulbPower;
+	String ipaddress, BulbPower="100";
 	TextView fanseekText, bulbseekText,textlog;
 	SeekBar fanseekBar, bulbseekBar;
 	Button bulb_power,fan_power, connect, clear;
@@ -47,8 +45,8 @@ public class HomeActivity extends Activity implements OnCheckedChangeListener ,O
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
-		bulbbutton = (Switch) findViewById(R.id.bulbswitch);
-		 fanbutton = (Switch)findViewById(R.id.fanswitch);
+		BulbToggleButton = (ToggleButton) findViewById(R.id.BulbToggleButton);
+		FanToggleButton = (ToggleButton)findViewById(R.id.FanToggleButton);
 		 clear = (Button)findViewById(R.id.clear);
 		fanseekText=(TextView)findViewById(R.id.fanseektext);
 		bulbseekText=(TextView)findViewById(R.id.bulbseektext);
@@ -65,8 +63,8 @@ public class HomeActivity extends Activity implements OnCheckedChangeListener ,O
 		fan_power.setOnClickListener(this);
 		connect.setOnClickListener(this);
 		clear.setOnClickListener(this);
-	     bulbbutton.setOnCheckedChangeListener(this);
-		fanbutton.setOnCheckedChangeListener(this);
+		BulbToggleButton.setOnCheckedChangeListener(this);
+		FanToggleButton.setOnCheckedChangeListener(this);
 		
 		 networktask = new NetworkTask();
 	}
@@ -75,14 +73,14 @@ public class HomeActivity extends Activity implements OnCheckedChangeListener ,O
 	@Override
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 		switch(buttonView.getId()){
-		case R.id.bulbswitch:
+	case R.id.BulbToggleButton:
 		{ if(isChecked){ 
 		
 		networktask.SendDataToNetwork("bulbHIGH"+"\n");}
-		else
-			networktask.SendDataToNetwork("bulbLOW"+"\n");
+	else
+	networktask.SendDataToNetwork("bulbLOW"+"\n");
 		} break;
-		case R.id.fanswitch:
+		case R.id.FanToggleButton:
 		{ if(isChecked)
 		networktask.SendDataToNetwork("fanHIGH"+"\n");
 		else
@@ -311,7 +309,7 @@ public class NetworkTask extends AsyncTask<Void, byte[], Boolean> {
 }
  
 public void CommandFromServer(String command ){
-	if(command.indexOf("BulbPower:")==0){//if the string starts with "setPoti"
+	if(command.indexOf("BulbPower:")==0){//if the string starts with "BubPower:"
         command=command.replace("BulbPower:", "");//remove the command
         BulbPower=command;
 	}
