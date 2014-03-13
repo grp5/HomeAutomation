@@ -8,7 +8,7 @@
          android:layout_width="match_parent"
          android:layout_height="match_parent" 
          android:orientation="vertical"
-         android:background="#d0d0d0">
+         android:background="@drawable/background">
          <View
   android:layout_width="match_parent"
   android:layout_height="10dp"
@@ -51,11 +51,17 @@
 
                     <Button
                         android:id="@+id/bulb_power"
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:text="Power" />
+                        android:text="Power"
+android:textColor="#990000"
+android:textSize="15sp"
+
+android:layout_width="80dp"
+android:layout_height="40dp"
+android:background="@drawable/powerbuttonshape"
+android:shadowColor="#CC0000"
+android:shadowDx="0"
+android:shadowDy="0"
+android:shadowRadius="5"/>
 
                 </TableRow>
 <View
@@ -67,12 +73,25 @@
                     android:id="@+id/tableRow2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" >
-
+ <!--
 <Switch
     android:id="@+id/bulbswitch"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_weight="1" />
+    android:layout_weight="1" />-->
+   
+     <ToggleButton
+        android:id="@+id/BulbToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="20dp"
+        style="@style/Widget.Button.Toggle"
+ 
+        android:textOn=""
+        android:textOff=""
+        />   
+        
 <View
   android:layout_width="match_parent"
   android:layout_height="10dp"
@@ -94,7 +113,36 @@
                 <SeekBar
                     android:id="@+id/bulbseekBar"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:progressDrawable="@drawable/seekbar_progress"
+        android:thumb="@drawable/seek_thumb_normal" />
+
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dim"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bright    "
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:gravity="right"
+                        
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                </TableRow>
 
             </TableLayout>
 
@@ -103,16 +151,37 @@
     </LinearLayout>
     <View
   android:layout_width="match_parent"
-  android:layout_height="10dp"
+  android:layout_height="20dp"
   >
+            
+</View>
+<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+     <View
+  android:layout_width="0dp"
+  android:layout_height="10dp"
+  android:layout_weight="1"
+  >
+            
 </View>
        <View
-    android:layout_width="match_parent"
-    android:layout_height="5dp"
-    android:background="#888888" >
+    android:layout_width="0dp"
+    android:layout_height="2dp"
+    android:background="#888888"
+    android:layout_weight="8" >
+                
 
 </View>
-    
+ <View
+  android:layout_width="0dp"
+  android:layout_height="10dp"
+  android:layout_weight="1"
+  >
+            
+</View>
+    </LinearLayout>
      <View
   android:layout_width="match_parent"
   android:layout_height="10dp"
@@ -155,11 +224,17 @@
 
                     <Button
                         android:id="@+id/fan_power"
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Power" />
+                        android:text="Power"
+android:textColor="#990000"
+android:textSize="15sp"
+
+android:layout_width="80dp"
+android:layout_height="40dp"
+android:background="@drawable/powerbuttonshape"
+android:shadowColor="#CC0000"
+android:shadowDx="0"
+android:shadowDy="0"
+android:shadowRadius="5"/>
 
                 </TableRow>
 <View
@@ -171,12 +246,24 @@
                     android:id="@+id/tableRow4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" >
-
+<!--
 <Switch
     android:id="@+id/fanswitch"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_weight="1" />
+    android:layout_weight="1" />-->
+    <ToggleButton
+        android:id="@+id/FanToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="20dp"
+        style="@style/Widget.Button.Toggle"
+ 
+        android:textOn=""
+        android:textOff=""
+        />
+
 <View
   android:layout_width="match_parent"
   android:layout_height="10dp"
@@ -198,7 +285,36 @@
                 <SeekBar
                     android:id="@+id/fanseekBar"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content" 
+                    android:progressDrawable="@drawable/seekbar_progress"
+        android:thumb="@drawable/seek_thumb_normal"/>
+                
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Slow"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fast    "
+                        android:layout_weight="1"
+                        
+                        android:gravity="right"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                </TableRow>
 
             </TableLayout>
 
@@ -207,15 +323,36 @@
     </LinearLayout>
     <View
   android:layout_width="match_parent"
-  android:layout_height="10dp"
+  android:layout_height="20dp"
   >
 </View>
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+     <View
+  android:layout_width="0dp"
+  android:layout_height="10dp"
+  android:layout_weight="1"
+  >
+            
+</View>
        <View
-    android:layout_width="match_parent"
-    android:layout_height="5dp"
-    android:background="#888888" >
+    android:layout_width="0dp"
+    android:layout_height="2dp"
+    android:background="#888888"
+    android:layout_weight="8" >
+                
 
 </View>
+ <View
+  android:layout_width="0dp"
+  android:layout_height="10dp"
+  android:layout_weight="1"
+  >
+            
+</View>
+    </LinearLayout>
 
         <View
   android:layout_width="match_parent"

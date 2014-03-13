@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#d0d0d0" >
+    android:background="@drawable/background" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -56,13 +56,14 @@
                         android:id="@+id/view3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content" 
-                        android:layout_weight="2"/>
+                        android:layout_weight="1"/>
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                          android:layout_weight="4"
                         android:textColor="#666666"
+                        android:gravity="center"
                         android:text="@string/power"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
                     <View
@@ -88,15 +89,29 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content" 
                         android:layout_weight="1"/>
-
-                    <TextView
+ <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" 
+            android:background="@drawable/powerbackground">
+<TextView
                         android:id="@+id/fan_kwh"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:text="Kwh"
+                       android:padding="5dp"
                         android:textColor="#333333"
                         android:textAppearance="?android:attr/textAppearanceLarge" />
+                    <TextView
+                        android:id="@+id/fankwh"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Kwh"
+                        android:padding="5dp"
+                        android:textColor="#993333"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </LinearLayout>
 
 <View
                         android:id="@+id/view3"
@@ -118,15 +133,30 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content" 
                         android:layout_weight="1"/>
-
-                    <TextView
+<LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" 
+            android:background="@drawable/powerbackground">
+<TextView
                         android:id="@+id/fan_w"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="W"
                         android:layout_weight="2"
+                        android:padding="5dp"
                         android:textColor="#333333"
                         android:textAppearance="?android:attr/textAppearanceLarge" />
+                    <TextView
+                        android:id="@+id/fanw"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="W"
+                        android:padding="5dp"
+                        android:layout_weight="2"
+                        android:textColor="#993333"
+                       
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </LinearLayout>
 
 <View
                         android:id="@+id/view3"
@@ -148,15 +178,30 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content" 
                         android:layout_weight="1"/>
-
-                    <TextView
+<LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" 
+            android:background="@drawable/powerbackground">
+<TextView
                         android:id="@+id/fan_v"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:padding="5dp"
+                        android:textColor="#333333"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
+                    <TextView
+                        android:id="@+id/fanv"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="V"
                         android:layout_weight="2"
-                        android:textColor="#333333"
+                        android:textColor="#993333"
+                        android:padding="5dp"
+                        
                         android:textAppearance="?android:attr/textAppearanceLarge" />
+                    </LinearLayout>
 
                    <View
                         android:id="@+id/view3"
@@ -179,15 +224,29 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content" 
                         android:layout_weight="1"/>
-
+<LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" 
+            android:background="@drawable/powerbackground">
+<TextView
+                        android:id="@+id/fan_a"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:padding="5dp"
+                        android:textColor="#333333"
+                        android:textAppearance="?android:attr/textAppearanceLarge" />
                      <TextView
-                         android:id="@+id/fan_a"
+                         android:id="@+id/fana"
                          android:layout_width="0dp"
                          android:layout_height="wrap_content"
                          android:text="A"
-                         android:textColor="#333333"
+                         android:textColor="#993333"
                          android:layout_weight="2"
+                        android:padding="5dp"
                          android:textAppearance="?android:attr/textAppearanceLarge" />
+                     </LinearLayout>
 
 <View
                         android:id="@+id/view3"
