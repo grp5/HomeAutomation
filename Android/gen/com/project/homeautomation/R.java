@@ -50,7 +50,7 @@ public final class R {
     public static final class id {
         public static final int BulbToggleButton=0x7f09001e;
         public static final int FanToggleButton=0x7f090024;
-        public static final int action_settings=0x7f09002d;
+        public static final int action_settings=0x7f09002b;
         public static final int bulb_a=0x7f090011;
         public static final int bulb_kwh=0x7f090008;
         public static final int bulb_power=0x7f09001d;
@@ -64,8 +64,7 @@ public final class R {
         public static final int bulbtext=0x7f09001c;
         public static final int bulbv=0x7f09000f;
         public static final int bulbw=0x7f09000c;
-        public static final int clear=0x7f09002b;
-        public static final int connect=0x7f09002a;
+        public static final int clear=0x7f090029;
         public static final int fan_a=0x7f090019;
         public static final int fan_kwh=0x7f090013;
         public static final int fan_power=0x7f090023;
@@ -80,7 +79,6 @@ public final class R {
         public static final int fanv=0x7f090018;
         public static final int fanw=0x7f090016;
         public static final int imageView1=0x7f090001;
-        public static final int ipaddress=0x7f090029;
         public static final int tableRow1=0x7f090004;
         public static final int tableRow2=0x7f090007;
         public static final int tableRow3=0x7f09000a;
@@ -90,7 +88,7 @@ public final class R {
         public static final int textView10=0x7f090027;
         public static final int textView2=0x7f090006;
         public static final int textView20=0x7f090028;
-        public static final int textlog=0x7f09002c;
+        public static final int textlog=0x7f09002a;
         public static final int view1=0x7f090000;
         public static final int view2=0x7f090003;
         public static final int view3=0x7f090005;
