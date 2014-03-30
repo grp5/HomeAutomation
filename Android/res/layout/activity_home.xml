@@ -88,8 +88,10 @@ android:shadowRadius="5"/>
         android:layout_marginLeft="20dp"
         style="@style/Widget.Button.Toggle"
  
-        android:textOn=""
-        android:textOff=""
+        android:textOn="ON"
+        android:textOff="     OFF"
+        android:textStyle="bold"
+        
         />   
         
 <View
@@ -260,8 +262,10 @@ android:shadowRadius="5"/>
         android:layout_marginLeft="20dp"
         style="@style/Widget.Button.Toggle"
  
-        android:textOn=""
-        android:textOff=""
+        android:textOn="ON"
+        android:textOff="     OFF"
+        android:textStyle="bold"
+       
         />
 
 <View
@@ -426,7 +430,7 @@ android:shadowRadius="5"/>
     android:layout_height="5dp"
     android:background="#888888" >
 
-</View>-->
+</View>
 
        <LinearLayout
            android:layout_width="match_parent"
@@ -449,7 +453,7 @@ android:shadowRadius="5"/>
                android:layout_weight="1"
                android:text="Connect" />
  
-       </LinearLayout>
+       </LinearLayout>-->
 
        <Button
            android:id="@+id/clear"
