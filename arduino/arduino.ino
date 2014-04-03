@@ -9,7 +9,7 @@ volatile int i=0;               // Variable to use as a counter
 volatile boolean zero_cross=0;  // Boolean to store a "switch" to tell us if we have crossed zero
 int AC_pin = 11; // Output to Opto Triac
 int bulb_pin=10;
-int fan_pin =9
+int fan_pin =9;
 int dim = 0;                    // Dimming level (0-128)  0 = on, 128 = 0ff
 int inc=1;                      // counting up or down, 1=up, -1=down
 
@@ -31,7 +31,8 @@ void CommandFromClient(String command);
 void bulb(String val);
 void setup() {                                      // Begin setup
   pinMode(AC_pin, OUTPUT);     
-pinMode(Relay_pin, OUTPUT); 
+pinMode(bulb_pin, OUTPUT); 
+pinMode(fan_pin, OUTPUT);
 // Set the Triac pin as output
   attachInterrupt(0, zero_cross_detect, RISING);   // Attach an Interupt to Pin 3 (interupt 0) for Zero Cross Detection
   Timer1.initialize(freqStep);                      // Initialize TimerOne library for the freq we need
@@ -108,23 +109,23 @@ void loop() {
     
   }
  Serial.println("waiting for client");
-  delay(1000);
+  delay(5000);}
 
-void CommandFromClient(command){
-  if(command==bulbHIGH){
+void CommandFromClient(String command){
+  if(command=="bulbHIGH"){
     
   digitalWrite(bulb_pin,HIGH);
 }
-  else if (command==bulbLOW){
+  else if (command=="bulbLOW"){
     
   digitalWrite(bulb_pin,LOW);
 }
  
-  else if(command==fanHIGH){
+  else if(command=="fanHIGH"){
     
   digitalWrite(fan_pin,HIGH);
 }
-  else if (command==fanLOW){
+  else if (command=="fanLOW"){
     
   digitalWrite(fan_pin,LOW);
 }
@@ -143,7 +144,7 @@ else if(command.indexOf("Bulb:")==0){
        void bulb(int val1)
        {
         dim=val1;
-        Serial.println(dim);
+        
         }
         
 
